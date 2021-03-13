@@ -1,0 +1,830 @@
+ <!DOCTYPE html>
+<html>
+<head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<title>delhiworld.com</title>3</head>
+<body><nav class="navbar navbar-expand-lg navbar-light bg-light">
+<div class="container-fluid">
+<a class="navbar-brand" href="#">delhiworld</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+</button>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+<li class="nav-item">
+<a class="nav-link active" aria-current="page" href="#">Home</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#">Boys Hostel</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#">Girls Hostel</a>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+               PG Accomodation
+</a>
+<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+<li><a class="dropdown-item" href="#"> For Girls</a></li>
+<li><a class="dropdown-item" href="#">For Boys</a></li>
+<li><hr class="dropdown-divider"></li>
+<li><a class="dropdown-item" href="#">Including Mess</a></li>
+</ul>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#">Contact Us</a>
+</li>
+</ul>
+<form class="d-flex">
+<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+<button class="btn btn-outline-success" type="submit">Search</button>
+</form>
+</div>
+</div>
+</nav></body>
+<style> element.style { background-color:crimson;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+body { 
+
+    font-family: 'Roboto', sans-serif;
+    background: #77c7d1; 
+    color: #646869;
+    -webkit-font-smoothing: antialiased;
+    font-size: 15px;
+    line-height: 24px;
+} 
+   element.style {
+}
+@media only screen and (max-width: 768px)
+.header {
+    background: #fff;
+    padding-top : 10px;
+    padding-bottom: 10px;
+}
+.header {
+    background: #fff;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #bod4de;
+    color: #646869;
+    -webkit-font-smoothing: antialiased;
+    font-size: 15px;
+    line-height: 24px;
+}  
+</style>
+<body>
+
+</body><div ui-view="header" class="ng-scope"><div ng-init="headerCtrl.loadInitData();" class="ng-scope">
+<div ng-init="homePageCtrl.loadHomePageData();" class="ng-scope">
+<div class="hero-section" style="background-image:url('./assets/images/slider_6.jpg') ">
+<div class="container-fluid">
+<div class="row">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<div class="search-block">
+<div class="search-head">
+<h1 class="display-1" style="color:rgb(0, 0, 0)">Residential hostels in Delhi.</h1>
+<p class="hidden-xs" style="color: rgb(197, 15, 15);">Get Quotes from featured Residential Hostel &amp; PG • Think Smart -Save Time </p>
+</div>
+
+<form ng-submit="homePageCtrl.submitQuery();" class="ng-pristine ng-invalid ng-invalid-required ng-valid-pattern">
+
+<div class="row" ng-submit="homePageCtrl.submitQuery();">
+<div class style="color:black"="col-md-4 col-sm-6 form-field">
+<label for="from" class="control-label sr-only"><strong>Your Name</strong></label>
+<input type="text" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" placeholder="Your Name" ng-model="homePageCtrl.rfq_detail.name" required="">
+</div>
+<div class style="color:black"="col-md-4 col-sm-6 form-field">
+<label for="from" class="control-label sr-only"><strong>Your Mobile<strong></label>
+<input type="text" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-pattern" placeholder="Your Mobile" pattern="[0-9]{10}" ng-model="homePageCtrl.rfq_detail.mobile" required="">
+</div>
+<div class style="color:black"="col-md-4 col-sm-12 form-field">
+<label for="from" class="control-label sr-only">Price &amp;<strong> Remark</strong></label>
+<input type="text" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" placeholder="Price &amp; Remark" ng-model="homePageCtrl.rfq_detail.message" required="">
+</div>
+</div>
+
+<div class style="color:black"="row">
+<div class ="col-md-4 col-sm-6 form-field">
+
+<label for="from" class="control-label sr-only"><strong>Near By Institute</strong></label>
+<select id="selectbasic" class="form-control selectpicker ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" ng-options="institute.name for institute in homePageCtrl.institutes" ng-model="homePageCtrl.rfq_detail.institute" required=""><option value="" class="" selected="selected">---Select Institute---</option><option label="classic IAS academy" value="object:112">classic IAS academy</option><option label="KHAN STUDY GRP" value="object:113">KHAN STUDY GRP</option><option label="Chanakya IAS academy" value="object:114">Chanakya IAS academy</option><option label="JEE academy value"="object:115">JEE academy </option><option label="Narayana IIT academy"value="object:116">Narayana IIT academy</option><option label="plutus IAS coaching" " value="object:117">plutus IAS coaching</option><option label="Vajiram and Ravi IAS coaching" value="object:118">Vajiram and Ravi IAS coaching</option><option label="Vision IAS academy" value="object:119">Vision IAS academy </option><option label="Shankar IAS academy" value="object:120">Shankar IAS academy</option><option label="Drishti IAS coatching" value="object:121">Drishti IAS coatching</option><option label="Shri Ram IAS academy" value="object:122">Shri Ram IAS academy</option><option label="St.Stephen's college" value="object:123">St.Stephen's college</option><option label="DTU" value="object:124">DTU</option><option label="Ramanujan College" value="object:125">Ramanujan College</option><option label="Career Point" value="object:126">Career Point</option><option label="FIT JEE Kalu Sarai " value="object:127">FIT JEE Kalu Sarai  </option><option label="Resonance - Main campus" value="object:128">Resonance - Main campus</option><option label="Motion IIT JEE" value="object:129">Motion IIT JEE</option><option label="FIIT JEE" value="object:130">FIIT JEE</option><option label="Brilliant Tutorials" value="object:131">Brilliant Tutorials</option><option label="Sarvottam Career Institute" value="object:132">Sarvottam Career Institute</option><option label="Sarvottam Career Institute" value="object:133">Sarvottam Career Institute</option><option label="Vibrant Academy (India) Pvt Ltd" value="object:134">Vibrant Academy (India) Pvt Ltd</option><option label="Nucleus inox" value="object:135">Nucleus inox</option><option label="Nucleus Education" value="object:136">Nucleus Education</option><option label="Dayal Singh college"  value="object:139">Dayal Singh college </option><option label="Allen Career Institute ( Sankalp )." value="object:141">Allen Career Institute ( Sankalp ).</option><option label="Career Point " value="object:142">Career Point </option><option label="test insitute" value="object:143">test insitute</option></select>
+
+</div>
+<div class style="color:black"="col-md-2 col-sm-6 form-field">
+<label for="from" class="control-label sr-only"><strong>Select Type</strong></label>
+
+<select id="selectbasic" name="selectbasic" class="form-control selectpicker ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" ng-model="homePageCtrl.rfq_detail.cat3" required="">
+<option value="" selected="selected">-- Select Type --</option>
+<option value="Male">Accommodation For Male</option>
+<option value="Female">Accommodation For Female</option>
+</select>
+
+</div>
+<div class style="color:black"="col-md-4 col-sm-12 form-field">
+<label for="from" class="control-label sr-only"><strong>Check In </strong></label>
+<select id="selectbasic" name="selectbasic" class="form-control selectpicker ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" ng-model="homePageCtrl.rfq_detail.rfq_checkIn" required="">
+<option value="" selected="selected">-- Select Check In Month --</option>
+<option value="0">Jan, 2021</option>
+<option value="1">Feb, 2021</option>
+<option value="2">Mar, 2021</option>
+<option value="3">Apr, 2021</option>
+<option value="4">May, 2021</option>
+<option value="5">June, 2021</option>
+<option value="6">July, 2021</option>
+<option value="7">Aug, 2021</option>
+<option value="8">Sept, 2021</option>
+<option value="9">Oct, 2021</option>
+<option value="10">Nov, 2021</option>
+<option value="11">Dec, 2021</option>
+</select>
+</div>
+<div class="col-md-2 col-sm-12 form-field">
+
+<button class="btn btn-default btn-block btn-lg" type="submit" ng-disabled="homePageCtrl.loading.btn_submit_rfq == true">
+<i class="fa fa-spinner fa-spin ng-hide" ng-show="homePageCtrl.loading.btn_submit_rfq == true">
+</i>&nbsp;&nbsp;Fill &amp; Continue
+</button>
+</div>
+</div>
+</form>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="container" style="margin-top: 28px;">
+<div class="space-medium bg-light">
+
+<div class="row">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<div class="section-title text-center">
+<h2 class="text-size-responsive-lg">
+<strong>Search hostels &amp; pg with reference to Categories. </strong>
+</h2>
+</div>
+</div>
+</div>
+
+<div class="row">
+
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+
+<a href="#!/users/Hostel-and-PG/Boys-Hostel" class="btn-user-filter text-size-responsive-xs" ui-sref="users-cat1-cat3({ 'cat1': ( 'Hostel-and-PG' | replace: '-' | replace_from_to: '&amp;': 'and' ), 'cat3': ( 'Boys-Hostel' | replace: '-' ) })"><strong>Boys Hostels</strong></a>
+
+<a href="#!/users/Hostel-and-PG/Girls-Hostel" class="btn-user-filter text-size-responsive-xs" ui-sref="users-cat1-cat3({ 'cat1': ( 'Hostel-and-PG' | replace: '-' | replace_from_to: '&amp;': 'and' ), 'cat3': ( 'Girls-Hostel' | replace: '-' ) })"><strong>Girls Hostels</strong></a>
+
+<a href="#!/users/Hostel-and-PG/Studio-Apartment" class="btn-user-filter text-size-responsive-xs" ui-sref="users-cat1-cat3({ 'cat1': ( 'Hostel-and-PG' | replace: '-' | replace_from_to: '&amp;': 'and' ), 'cat3': ( 'Studio-Apartment' | replace: '-' ) })"><strong>Studio Apartment</strong></a>
+
+<a href="#!/users/Hostel-and-PG/Multistorey-Flat" class="btn-user-filter text-size-responsive-xs" ui-sref="users-cat1-cat3({ 'cat1': ( 'Hostel-and-PG' | replace: '-' | replace_from_to: '&amp;': 'and' ), 'cat3': ( 'Multistorey-Flat' | replace: '-' ) })"><strong>Multistorey Flat</strong></a>
+
+<a href="#!/users/Hostel-and-PG/PG-Accomodation" class="btn-user-filter text-size-responsive-xs" ui-sref="users-cat1-cat3({ 'cat1': ( 'Hostel-and-PG' | replace: '-' | replace_from_to: '&amp;': 'and' ), 'cat3': ( 'PG-Accomodation' | replace: '-' ) })"><strong>Pg Accomodation</strong></a>
+
+<a href="#!/users/Hostel-and-PG/PG-Accomodation-Girls" class="btn-user-filter text-size-responsive-xs" ui-sref="users-cat1-cat3({ 'cat1': ( 'Hostel-and-PG' | replace: '-' | replace_from_to: '&amp;': 'and' ), 'cat3': ( 'PG-Accomodation-Girls' | replace: '-' ) })"><strong>Pg Accomodation Girls<strong></strong></strong></a><strong><strong>
+
+</strong></strong></div><strong><strong>
+
+</strong></strong></div><strong><strong>
+
+</strong></strong></div><strong><strong>
+</strong></strong></div><strong><strong>
+
+<div class="container">
+<div class="row ng-scope" ng-repeat="view in homePageCtrl.homePageData | orderBy: 'position'" style="margin-right: 0px !important;">
+
+<div class="col-lg-12 col-md-12 col-sm-12 col-12 col-xs-12 ng-scope" ng-include="homePageCtrl.getHTMLByViewType(view.view_type)"></div>
+
+</div><div class="row ng-scope" ng-repeat="view in homePageCtrl.homePageData | orderBy: 'position'" style="margin-right: 0px !important;">
+
+<div class="col-lg-12 col-md-12 col-sm-12 col-12 col-xs-12 ng-scope" ng-include="homePageCtrl.getHTMLByViewType(view.view_type)"></div>
+
+</div><div class="row ng-scope" ng-repeat="view in homePageCtrl.homePageData | orderBy: 'position'" style="margin-right: 0px !important;">
+
+<div class="col-lg-12 col-md-12 col-sm-12 col-12 col-xs-12 ng-scope" ng-include="homePageCtrl.getHTMLByViewType(view.view_type)"></div>
+
+</div>
+<div class="row ng-scope" ng-repeat="view in homePageCtrl.homePageData | orderBy: 'position'" style="margin-right: 0px !important;">
+
+<div class="col-lg-12 col-md-12 col-sm-12 col-12 col-xs-12 ng-scope" ng-include="homePageCtrl.getHTMLByViewType(view.view_type)"></div>
+
+</div>'position' --><div class="row ng-scope" ng-repeat="view in homePageCtrl.homePageData | orderBy: 'position'" style="margin-right: 0px !important;">
+
+<div class="col-lg-12 col-md-12 col-sm-12 col-12 col-xs-12 ng-scope" ng-include="homePageCtrl.getHTMLByViewType(view.view_type)"><div class="space-medium bg-light ng-scope">
+<div class="container">
+<div class="row">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<div class="section-title text-center">
+
+<h2>Search hostels &amp; pg with reference to localities. </h2>
+<p>( Select Localities. )</p>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ng-scope" ng-repeat="cat3_obj in view.data_list | filter: { name: '', img: '' } ">
+
+<a href="#!/users/Hostel-and-PG/Land-Mark" ui-sref="users-cat1-cat2({ 'cat1': ( 'Hostel and PG' | replace: '-' | replace_from_to: '&amp;': 'and' ), 'cat2': ( cat3_obj.name | replace: '-' ) })" ng-click="homePageCtrl.trackOneSignalNotification({ 'title': 'clicked on ' + cat3_obj.name + ' from homepage'})">
+
+
+<div class="dashboard-data" style="margin-bottom: 10px; background: #f2f2f2;">
+<div class="db-user-profile-box">
+<div class="row">
+<div class="col-lg-3 col-md-4 col-sm-3 col-5">
+<div class="user-profile-img">
+
+<img class="img-responsive" ng-src="https://s3.us-east-2.amazonaws.com/images-city-teens/cropped758580922.jpg" onerror="this.src='./assets/images/building-image.png'" alt="Hostels in Delhi, Land Mark" style="height: 80px; width:80px; border-radius: 5px;" src="https://s3.us-east-2.amazonaws.com/images-city-teens/cropped758580922.jpg">
+</div>
+</div>
+
+<div class="col-lg-9 col-md-8 col-sm-9 col-7">
+<div class="user-profile-info">
+<h3 class="text-size-responsive-md">
+<strong class="ng-binding">Rashrapathi Bhavan</strong>
+</h3>
+<p class="text-size-responsive-sm ng-binding">10 Hostels</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+
+</a>
+
+
+</div><div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ng-scope" ng-repeat="cat3_obj in view.data_list | filter: { name: '', img: '' } ">
+
+<a href="#https://maps.app.goo.gl/v1u9jAXavptuDa7p9" ui-sref="users-cat1-cat2({ 'cat1': ( 'Hostel and PG' | replace: '-' | replace_from_to: '&amp;': 'and' ), 'cat2': ( cat3_obj.name | replace: '-' ) })" ng-click="homePageCtrl.trackOneSignalNotification({ 'title': 'clicked on ' + cat3_obj.name + ' from homepage'})">
+
+<div class="dashboard-data" style="margin-bottom: 10px; background: #f2f2f2;">
+<div class="db-user-profile-box">
+<div class="row">
+<div class="col-lg-3 col-md-4 col-sm-3 col-5">
+<div class="user-profile-img">
+
+<img class="img-responsive" ng-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWXoni2Qe5A-9WdQ0JXDHJtcvLGXlv1RPPzg&usqp=CAU" onerror="this.src='./assets/images/building-image.png'" alt="Hostels in Delhi, Gandhi Nagar" style="height: 80px; width:80px; border-radius: 5px;" src="https://s3.us-east-2.amazonaws.com/images-city-teens/thumb_360_360_IMG_20190513_1044560.37772268990175617.jpg">
+</div>
+</div>
+
+<div class="col-lg-9 col-md-8 col-sm-9 col-7">
+<div class="user-profile-info">
+<h3 class="text-size-responsive-md">
+<strong class="ng-binding">Gandhi Nagar</strong>
+</h3>
+<p class="text-size-responsive-sm ng-binding">15 Hostels</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+</a>
+</div><div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ng-scope" ng-repeat="cat3_obj in view.data_list | filter: { name: '', img: '' } ">
+
+<a href="#!/users/Hostel-and-PG/Dwarka" ui-sref="users-cat1-cat2({ 'cat1': ( 'Hostel and PG' | replace: '-' | replace_from_to: '&amp;': 'and' ), 'cat2': ( cat3_obj.name | replace: '-' ) })" ng-click="homePageCtrl.trackOneSignalNotification({ 'title': 'clicked on ' + cat3_obj.name + ' from homepage'})">
+
+
+<div class="dashboard-data" style="margin-bottom: 10px; background: #f2f2f2;">
+<div class="db-user-profile-box">
+<div class="row">
+<div class="col-lg-3 col-md-4 col-sm-3 col-5">
+<div class="user-profile-img">
+
+<img class="img-responsive" ng-src="https://s3.us-east-2.amazonaws.com/images-city-teens/thumb_953_1152_cropped1688752003222340140.jpg" onerror="this.src='./assets/images/building-image.png'" alt="Hostels in Delhi, Dwarka" style="height: 80px; width:80px; border-radius: 5px;" src="https://s3.us-east-2.amazonaws.com/images-city-teens/thumb_953_1152_cropped1688752003222340140.jpg">
+</div>
+</div>
+
+<div class="col-lg-9 col-md-8 col-sm-9 col-7">
+<div class="user-profile-info">
+<h3 class="text-size-responsive-md">
+<strong class="ng-binding">Dwarka</strong>
+</h3>
+<p class="text-size-responsive-sm ng-binding">13 Hostels</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+</a>
+</div><div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ng-scope" ng-repeat="cat3_obj in view.data_list | filter: { name: '', img: '' } ">
+
+<a href="#!/users/Hostel-and-PG/Jawahar-Nagar" ui-sref="users-cat1-cat2({ 'cat1': ( 'Hostel and PG' | replace: '-' | replace_from_to: '&amp;': 'and' ), 'cat2': ( cat3_obj.name | replace: '-' ) })" ng-click="homePageCtrl.trackOneSignalNotification({ 'title': 'clicked on ' + cat3_obj.name + ' from homepage'})">
+<div class="dashboard-data" style="margin-bottom: 10px; background: #f2f2f2;">
+<div class="db-user-profile-box">
+<div class="row">
+<div class="col-lg-3 col-md-4 col-sm-3 col-5">
+<div class="user-profile-img">
+
+<img class="img-responsive" ng-src="https://s3.us-east-2.amazonaws.com/images-city-teens/cropped2364513998979215554.jpg" onerror="this.src='./assets/images/building-image.png'" alt="Hostels in Delhi, Jawahar Nagar" style="height: 80px; width:80px; border-radius: 5px;" src="https://s3.us-east-2.amazonaws.com/images-city-teens/cropped2364513998979215554.jpg">
+</div>
+</div>
+
+<div class="col-lg-9 col-md-8 col-sm-9 col-7">
+<div class="user-profile-info">
+<h3 class="text-size-responsive-md">
+<strong class="ng-binding">Jawahar Nagar</strong>
+</h3>
+<p class="text-size-responsive-sm ng-binding">13 Hostels</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+</a>
+</div><div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ng-scope" ng-repeat="cat3_obj in view.data_list | filter: { name: '', img: '' } ">
+
+<a href="#!/users/Hostel-and-PG/Indira-Vihar" ui-sref="users-cat1-cat2({ 'cat1': ( 'Hostel and PG' | replace: '-' | replace_from_to: '&amp;': 'and' ), 'cat2': ( cat3_obj.name | replace: '-' ) })" ng-click="homePageCtrl.trackOneSignalNotification({ 'title': 'clicked on ' + cat3_obj.name + ' from homepage'})">
+
+
+<div class="dashboard-data" style="margin-bottom: 10px; background: #f2f2f2;">
+<div class="db-user-profile-box">
+<div class="row">
+<div class="col-lg-3 col-md-4 col-sm-3 col-5">
+<div class="user-profile-img">
+
+<img class="img-responsive" ng-src="https://s3.us-east-2.amazonaws.com/images-city-teens/thumb_576_768_cropped960730473.jpg" onerror="this.src='./assets/images/building-image.png'" alt="Hostels in Delhi, Red Fort" style="height: 80px; width:80px; border-radius: 5px;" src="https://s3.us-east-2.amazonaws.com/images-city-teens/thumb_576_768_cropped960730473.jpg">
+</div>
+</div>
+
+<div class="col-lg-9 col-md-8 col-sm-9 col-7">
+<div class="user-profile-info">
+<h3 class="text-size-responsive-md">
+<strong class="ng-binding">Red Fort</strong>
+</h3>
+<p class="text-size-responsive-sm ng-binding">9 Hostels</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+</a>
+</div><div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ng-scope" ng-repeat="cat3_obj in view.data_list | filter: { name: '', img: '' } ">
+<a href="#!/users/Hostel-and-PG/Others" ui-sref="users-cat1-cat2({ 'cat1': ( 'Hostel and PG' | replace: '-' | replace_from_to: '&amp;': 'and' ), 'cat2': ( cat3_obj.name | replace: '-' ) })" ng-click="homePageCtrl.trackOneSignalNotification({ 'title': 'clicked on ' + cat3_obj.name + ' from homepage'})">
+<div class="dashboard-data" style="margin-bottom: 10px; background: #f2f2f2;">
+<div class="db-user-profile-box">
+<div class="row">
+<div class="col-lg-3 col-md-4 col-sm-3 col-5">
+<div class="user-profile-img">
+
+<img class="img-responsive" ng-src="https://s3.us-east-2.amazonaws.com/images-city-teens/thumb_1064_1533_cropped870749715709666244.jpg" onerror="this.src='./assets/images/building-image.png'" alt="Hostels in Kota, Others" style="height: 80px; width:80px; border-radius: 5px;" src="https://s3.us-east-2.amazonaws.com/images-city-teens/thumb_1064_1533_cropped870749715709666244.jpg">
+</div>
+</div>
+
+<div class="col-lg-9 col-md-8 col-sm-9 col-7">
+<div class="user-profile-info">
+<h3 class="text-size-responsive-md">
+<strong class="ng-binding">Others</strong>
+</h3>
+<p class="text-size-responsive-sm ng-binding">35 Hostels</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+</a>
+</div><div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ng-scope" ng-repeat="cat3_obj in view.data_list | filter: { name: '', img: '' } ">
+
+<a href="#!/users/Hostel-and-PG/Talvandi" ui-sref="users-cat1-cat2({ 'cat1': ( 'Hostel and PG' | replace: '-' | replace_from_to: '&amp;': 'and' ), 'cat2': ( cat3_obj.name | replace: '-' ) })" ng-click="homePageCtrl.trackOneSignalNotification({ 'title': 'clicked on ' + cat3_obj.name + ' from homepage'})">
+<div class="dashboard-data" style="margin-bottom: 10px; background: #f2f2f2;">
+<div class="db-user-profile-box">
+<div class="row">
+<div class="col-lg-3 col-md-4 col-sm-3 col-5">
+<div class="user-profile-img">
+
+<img class="img-responsive" ng-src="https://s3.us-east-2.amazonaws.com/images-city-teens/thumb_432_576_cropped5281409924274198085.jpg" onerror="this.src='./assets/images/building-image.png'" alt="Hostels in Delhi, Janakpuri" style="height: 80px; width:80px; border-radius: 5px;" src="https://s3.us-east-2.amazonaws.com/images-city-teens/thumb_432_576_cropped5281409924274198085.jpg">
+</div>
+</div>
+
+<div class="col-lg-9 col-md-8 col-sm-9 col-7">
+<div class="user-profile-info">
+<h3 class="text-size-responsive-md">
+<strong class="ng-binding">Janakpuri</strong>
+</h3>
+<p class="text-size-responsive-sm ng-binding">5 Hostels</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</a>
+</div><div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ng-scope" ng-repeat="cat3_obj in view.data_list | filter: { name: '', img: '' } ">
+<a href="#!/users/Hostel-and-PG/IPIA" ui-sref="users-cat1-cat2({ 'cat1': ( 'Hostel and PG' | replace: '-' | replace_from_to: '&amp;': 'and' ), 'cat2': ( cat3_obj.name | replace: '-' ) })" ng-click="homePageCtrl.trackOneSignalNotification({ 'title': 'clicked on ' + cat3_obj.name + ' from homepage'})">
+<div class="dashboard-data" style="margin-bottom: 10px; background: #f2f2f2;">
+<div class="db-user-profile-box">
+<div class="row">
+<div class="col-lg-3 col-md-4 col-sm-3 col-5">
+<div class="user-profile-img">
+
+<img class="img-responsive" ng-src="https://s3.us-east-2.amazonaws.com/images-city-teens/thumb_360_360_IMG_20190513_1331090.6769177253884385.jpg" onerror="this.src='./assets/images/building-image.png'" alt="Hostels in Delhi,Hauz Khas" style="height: 80px; width:80px; border-radius: 5px;" src="https://s3.us-east-2.amazonaws.com/images-city-teens/thumb_360_360_IMG_20190513_1331090.6769177253884385.jpg">
+</div>
+</div>
+<div class="col-lg-9 col-md-8 col-sm-9 col-7">
+<div class="user-profile-info">
+<h3 class="text-size-responsive-md">
+<strong class="ng-binding">Hauz Khas</strong>
+</h3>
+<p class="text-size-responsive-sm ng-binding">16 Hostels</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ng-scope" ng-repeat="cat3_obj in view.data_list | filter: { name: '', img: '' } ">
+
+<a href="#!/users/Hostel-and-PG/Electronic-Complex" ui-sref="users-cat1-cat2({ 'cat1': ( 'Hostel and PG' | replace: '-' | replace_from_to: '&amp;': 'and' ), 'cat2': ( cat3_obj.name | replace: '-' ) })" ng-click="homePageCtrl.trackOneSignalNotification({ 'title': 'clicked on ' + cat3_obj.name + ' from homepage'})">
+
+
+<div class="dashboard-data" style="margin-bottom: 10px; background: #f2f2f2;">
+<div class="db-user-profile-box">
+<div class="row">
+<div class="col-lg-3 col-md-4 col-sm-3 col-5">
+<div class="user-profile-img">
+
+<img class="img-responsive" ng-src="https://s3.us-east-2.amazonaws.com/images-city-teens/thumb_360_360_IMG_20190507_0716370.05520336993144559.jpg" onerror="this.src='./assets/images/building-image.png'" alt="Hostels in Delhi, Vikaspuri  style="height: 80px; width:80px; border-radius: 5px;" src="https://s3.us-east-2.amazonaws.com/images-city-teens/thumb_360_360_IMG_20190507_0716370.05520336993144559.jpg">
+</div>
+</div>
+
+<div class="col-lg-9 col-md-8 col-sm-9 col-7">
+<div class="user-profile-info">
+<h3 class="text-size-responsive-md">
+<strong class="ng-binding">Vikaspuri </strong>
+</h3>
+<p class="text-size-responsive-sm ng-binding">12 Hostels</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+
+</a>
+
+
+</div><!-- end ngRepeat: cat3_obj in view.data_list | filter: { name: '', img: '' }  --><div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ng-scope" ng-repeat="cat3_obj in view.data_list | filter: { name: '', img: '' } ">
+
+<a href="#!/users/Hostel-and-PG/Dadabadi" ui-sref="users-cat1-cat2({ 'cat1': ( 'Hostel and PG' | replace: '-' | replace_from_to: '&amp;': 'and' ), 'cat2': ( cat3_obj.name | replace: '-' ) })" ng-click="homePageCtrl.trackOneSignalNotification({ 'title': 'clicked on ' + cat3_obj.name + ' from homepage'})">
+
+
+<div class="dashboard-data" style="margin-bottom: 10px; background: #f2f2f2;">
+<div class="db-user-profile-box">
+<div class="row">
+<div class="col-lg-3 col-md-4 col-sm-3 col-5">
+<div class="user-profile-img">
+
+<img class="img-responsive" ng-src="https://s3.us-east-2.amazonaws.com/images-city-teens/thumb_720_770_cropped497780513575299515.jpg" onerror="this.src='./assets/images/building-image.png'" alt="Hostels in Delhi, Malviya Nagar" style="height: 80px; width:80px; border-radius: 5px;" src="https://s3.us-east-2.amazonaws.com/images-city-teens/thumb_720_770_cropped497780513575299515.jpg">
+</div>
+</div>
+
+<div class="col-lg-9 col-md-8 col-sm-9 col-7">
+<div class="user-profile-info">
+<h3 class="text-size-responsive-md">
+<strong class="ng-binding">Malviya Nagar</strong>
+</h3>
+<p class="text-size-responsive-sm ng-binding">7 Hostels</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+
+</a>
+
+
+</div><!-- end ngRepeat: cat3_obj in view.data_list | filter: { name: '', img: '' }  --><div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ng-scope" ng-repeat="cat3_obj in view.data_list | filter: { name: '', img: '' } ">
+
+<a href="#!/users/Hostel-and-PG/12-th" ui-sref="users-cat1-cat2({ 'cat1': ( 'Hostel and PG' | replace: '-' | replace_from_to: '&amp;': 'and' ), 'cat2': ( cat3_obj.name | replace: '-' ) })" ng-click="homePageCtrl.trackOneSignalNotification({ 'title': 'clicked on ' + cat3_obj.name + ' from homepage'})">
+
+
+<div class="dashboard-data" style="margin-bottom: 10px; background: #f2f2f2;">
+<div class="db-user-profile-box">
+<div class="row">
+<div class="col-lg-3 col-md-4 col-sm-3 col-5">
+<div class="user-profile-img">
+
+<img class="img-responsive" ng-src="https://s3.us-east-2.amazonaws.com/images-city-teens/thumb_712_540_cropped1255029869.jpg" onerror="this.src='./assets/images/building-image.png'" alt="Hostels in Delhi,Gurmandi" style="height: 80px; width:80px; border-radius: 5px;" src="https://s3.us-east-2.amazonaws.com/images-city-teens/thumb_712_540_cropped1255029869.jpg">
+</div>
+</div>
+
+<div class="col-lg-9 col-md-8 col-sm-9 col-7">
+<div class="user-profile-info">
+<h3 class="text-size-responsive-md">
+<strong class="ng-binding">Gurmandi</strong>
+</h3>
+<p class="text-size-responsive-sm ng-binding">3 Hostels</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+
+</a>
+
+
+</div><!-- end ngRepeat: cat3_obj in view.data_list | filter: { name: '', img: '' }  -->
+
+
+<!-- <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" ng-repeat="cat3_obj in view.data_list | filter: { name: '', img: '' } | limitTo: 9 ">
+
+<a href="" ui-sref="users-cat1-cat2({ 'cat1': ( 'Hostel and PG' | replace: '-' | replace_from_to: '&': 'and' ), 'cat2': ( cat3_obj.name | replace: '-' ) })">
+
+<div class="destination-grid-box">
+<div class="destination-img">
+
+<img class="img-responsive" ng-src='{{ cat3_obj.img.substr(0,4) == "http" ? cat3_obj.img : "https://s3.us-east-2.amazonaws.com/images-city-teens/"+ cat3_obj.img }}' onerror="this.src='./assets/images/building-image.png'" alt="Hostels in Delhi, {{cat3_obj.name}}" style="height: 350px;" />
+
+<div class="destination-content">
+<h2 class="destination-title">
+<label style="color: white; font-size: 23px;">{{ cat3_obj.name }} &nbsp;( {{ cat3_obj.count }} )</label>
+</h2>
+</div>
+
+</div>
+</div>
+
+</a>
+
+</div> -->
+
+
+<!-- <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+<div class="destination-grid-box">
+<div class="destination-img"><a href="#"><img src="./assets/images/destination-2.jpg" alt="australia" class="img-responsive"></a>
+<div class="destination-content">
+<h2 class="destination-title"><a href="#">Germany</a></h2></div>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+<div class="destination-grid-box">
+<div class="destination-img"><a href="#"><img src="./assets/images/destination-3.jpg" alt="australia" class="img-responsive"></a>
+<div class="destination-content">
+<h2 class="destination-title"><a href="#">Iceland</a></h2></div>
+</div>
+</div>
+</div> -->
+</div>
+<!-- <div class="row">
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+<div class="destination-grid-box">
+<div class="destination-img"><a href="#"><img src="./assets/images/destination-4.jpg" alt="australia" class="img-responsive"></a>
+<div class="destination-content">
+<h2 class="destination-title"><a href="#">United States</a></h2></div>
+</div>
+</div>
+</div>
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+<div class="destination-grid-box">
+<div class="destination-img"><a href="#"><img src="./assets/images/destination-5.jpg" alt="australia" class="img-responsive"></a>
+<div class="destination-content">
+<h2 class="destination-title"><a href="#">Maldives</a></h2></div>
+</div>
+</div>
+</div>
+</div> -->
+</div>
+</div></div>
+
+</div><!-- end ngRepeat: view in homePageCtrl.homePageData | orderBy: 'position' --><div class="row ng-scope" ng-repeat="view in homePageCtrl.homePageData | orderBy: 'position'" style="margin-right: 0px !important;">
+
+<!-- ngInclude: homePageCtrl.getHTMLByViewType(view.view_type) --><div class="col-lg-12 col-md-12 col-sm-12 col-12 col-xs-12 ng-scope" ng-include="homePageCtrl.getHTMLByViewType(view.view_type)"></div>
+
+</div><!-- end ngRepeat: view in homePageCtrl.homePageData | orderBy: 'position' --><div class="row ng-scope" ng-repeat="view in homePageCtrl.homePageData | orderBy: 'position'" style="margin-right: 0px !important;">
+
+<!-- ngInclude: homePageCtrl.getHTMLByViewType(view.view_type) --><div class="col-lg-12 col-md-12 col-sm-12 col-12 col-xs-12 ng-scope" ng-include="homePageCtrl.getHTMLByViewType(view.view_type)"></div>
+
+</div><!-- end ngRepeat: view in homePageCtrl.homePageData | orderBy: 'position' --><div class="row ng-scope" ng-repeat="view in homePageCtrl.homePageData | orderBy: 'position'" style="margin-right: 0px !important;">
+
+<!-- ngInclude: homePageCtrl.getHTMLByViewType(view.view_type) --><div class="col-lg-12 col-md-12 col-sm-12 col-12 col-xs-12 ng-scope" ng-include="homePageCtrl.getHTMLByViewType(view.view_type)"><div class="space-medium ng-scope">
+<div class="container">
+<div class="row">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<div class="section-title text-center">
+<!-- section title start-->
+<h2>Featured Hostels</h2>
+<p>( Get offers and discover incredible hostels in Delhi. )</p>
+</div>
+<!-- /.section title start-->
+</div>
+</div>
+
+<div class="row">
+<!-- ngRepeat: user in view.data_list | orderBy: '-ts_update' track by $index --><div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 ng-scope" ng-repeat="user in view.data_list | orderBy: '-ts_update' track by $index">
+<div class="hostel-thumbnail-list" style="height: 415px;">
+<!-- hostel thumbnail list -->
+<div class="hostel-list-img">
+
+<a href="#!/user/Delhi/189a88pno8i3/nehu-residency" ui-sref="user({ 'u_name': ( user.u_web_url ) , 'u_city': ( user.u_city.toLowerCase() | replace: '-' | replace_dot: '-' ) || 'Delhi', 'userId': user.u_ctns_id })">
+<img ng-src="https://s3.us-east-2.amazonaws.com/images-city-teens/thumb_360_360_IMG_20190429_1343040.86840229450555.jpg" onerror="this.src='assets/images/building-image.png'" alt="Nehru Residency, Hostel &amp; PG in Delhi, Rashtrapati Bhavan" style="height: 255px;" src="https://s3.us-east-2.amazonaws.com/images-city-teens/thumb_360_360_IMG_20190429_1343040.86840229450555.jpg">
+</a>
+
+<!--                         <div class="hostel-wishlist">
+<a href="#" class="wishlist-heart"></a>
+</div>
+ -->
+</div>
+
+<div class="hostel-content" style="height: 160px;">
+<a href="#!/user/Delhi/189a88pno8i3/nehu-residency" ui-sref="user({ 'u_name': ( user.u_web_url ) , 'u_city': ( user.u_city.toLowerCase() | replace: '-' | replace_dot: '-' ) || 'Delhi', 'userId': user.u_ctns_id })">
+<div>
+<h3 class="hostel-title ng-binding">
+                                    Nehu Residency</h3>
+<p class="hostel-address ng-binding">32 New Kamla Udhyan Landm</p>
+</div>
+<div class="hostel-meta">
+<span class="hostel-price">
+<span class="price-from ng-binding">Girls Hostel&nbsp;</span>
+<p>
+<span class="price ng-binding">&nbsp;</span>
+</p>
+<span class="hostel-rating">
+<!-- <span class="rate"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span> -->
+<!-- <span class="reviews" style="color: blueviolet;">{{user.total_products}}&nbsp;Products</span>
+</span> -->
+</span></span></div>
+</a>
+</div>
+</div>
+<!-- /.hostel thumbnail list -->
+</div><!-- end ngRepeat: user in view.data_list | orderBy: '-ts_update' track by $index --><div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 ng-scope" ng-repeat="user in view.data_list | orderBy: '-ts_update' track by $index">
+<div class="hostel-thumbnail-list" style="height: 415px;">
+<!-- hostel thumbnail list -->
+<div class="hostel-list-img">
+
+<a href="#!/user/Delhi/84dl3x3x5ghr/yashoda-residency" ui-sref="user({ 'u_name': ( user.u_web_url ) , 'u_city': ( user.u_city.toLowerCase() | replace: '-' | replace_dot: '-' ) || 'Delhi', 'userId': user.u_ctns_id })">
+<img ng-src="https://s3.us-east-2.amazonaws.com/images-city-teens/fsufygsufgusgf.jpg" onerror="this.src='assets/images/building-image.png'" alt="Yashoda Residency, Hostel &amp; PG in Delhi, Vasanth Vihar" style="height: 255px;" src="https://s3.us-east-2.amazonaws.com/images-city-teens/fsufygsufgusgf.jpg">
+</a>
+
+<!--                         <div class="hostel-wishlist">
+<a href="#" class="wishlist-heart"></a>
+</div>
+ -->
+</div>
+
+<div class="hostel-content" style="height: 160px;">
+<a href="#!/user/Delhi/84dl3x3x5ghr/yashoda-residency" ui-sref="user({ 'u_name': ( user.u_web_url ) , 'u_city': ( user.u_city.toLowerCase() | replace: '-' | replace_dot: '-' ) || 'Delhi', 'userId': user.u_ctns_id })">
+<div>
+<h3 class="hostel-title ng-binding">
+                                    Yashoda Residency</h3>
+<p class="hostel-address ng-binding">823 , Indira Vihar, Delhi</p>
+</div>
+<div class="hostel-meta">
+<span class="hostel-price">
+<span class="price-from ng-binding">Boys Hostel&nbsp;</span>
+<p>
+<span class="price ng-binding">One Of Finest Hostel Near</span>
+</p>
+<span class="hostel-rating">
+<!-- <span class="rate"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span> -->
+<!-- <span class="reviews" style="color: blueviolet;">{{user.total_products}}&nbsp;Products</span>
+</span> -->
+</span></span></div>
+</a>
+</div>
+</div>
+<!-- /.hostel thumbnail list -->
+</div><!-- end ngRepeat: user in view.data_list | orderBy: '-ts_update' track by $index --><div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 ng-scope" ng-repeat="user in view.data_list | orderBy: '-ts_update' track by $index">
+<div class="hostel-thumbnail-list" style="height: 415px;">
+<!-- hostel thumbnail list -->
+<div class="hostel-list-img">
+
+<a href="#!/user/Delhi/32f1fh3g0ln6/mundras-residency" ui-sref="user({ 'u_name': ( user.u_web_url ) , 'u_city': ( user.u_city.toLowerCase() | replace: '-' | replace_dot: '-' ) || 'Delhi', 'userId': user.u_ctns_id })">
+<img ng-src="https://s3.us-east-2.amazonaws.com/images-city-teens/cropped1191000689.jpg" onerror="this.src='assets/images/building-image.png'" alt="Mundra's Residency, Hostel &amp; PG in Kota, Rajiv Gandhi" style="height: 255px;" src="https://s3.us-east-2.amazonaws.com/images-city-teens/cropped1191000689.jpg">
+</a>
+
+<!--                         <div class="hostel-wishlist">
+<a href="#" class="wishlist-heart"></a>
+</div>
+ -->
+</div>
+
+<div class="hostel-content" style="height: 160px;">
+<a href="#!/user/delhi/32f1fh3g0ln6/mundras-residency" ui-sref="user({ 'u_name': ( user.u_web_url ) , 'u_city': ( user.u_city.toLowerCase() | replace: '-' | replace_dot: '-' ) || 'Delhi', 'userId': user.u_ctns_id })">
+<div>
+<h3 class="hostel-title ng-binding">
+                                    Mundra's Residency</h3>
+<p class="hostel-address ng-binding">238,Vasant Vihar  ,</p>
+</div>
+<div class="hostel-meta">
+<span class="hostel-price">
+<span class="price-from ng-binding">Girls Hostel&nbsp;</span>
+<p>
+<span class="price ng-binding">Rs. 8,500 To 12,000/-</span>
+</p>
+<span class="hostel-rating">
+
+</span></span></div>
+</a>
+</div>
+</div>
+
+</div><div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 ng-scope" ng-repeat="user in view.data_list | orderBy: '-ts_update' track by $index">
+<div class="hostel-thumbnail-list" style="height: 415px;">
+
+<div class="hostel-list-img">
+
+<a href="#!/user/Delhi/4hohn4r13v6h/brij-residency" ui-sref="user({ 'u_name': ( user.u_web_url ) , 'u_city': ( user.u_city.toLowerCase() | replace: '-' | replace_dot: '-' ) || 'Delhi', 'userId': user.u_ctns_id })">
+<img ng-src="https://s3.us-east-2.amazonaws.com/images-city-teens/thumb_615_1075_cropped1330310415.jpg" onerror="this.src='assets/images/building-image.png'" alt="Brij Residency, Hostel &amp; PG in Delhi, IPIA" style="height: 255px;" src="https://s3.us-east-2.amazonaws.com/images-city-teens/thumb_615_1075_cropped1330310415.jpg">
+</a>
+
+<!--                         <div class="hostel-wishlist">
+<a href="#" class="wishlist-heart"></a>
+</div>
+ -->
+</div>
+
+<div class="hostel-content" style="height: 160px;">
+<a href="#!/user/Delhi/4hohn4r13v6h/brij-residency" ui-sref="user({ 'u_name': ( user.u_web_url ) , 'u_city': ( user.u_city.toLowerCase() | replace: '-' | replace_dot: '-' ) || 'Delhi', 'userId': user.u_ctns_id })">
+<div>
+<h3 class="hostel-title ng-binding">
+                                    Brij Residency</h3>
+<p class="hostel-address ng-binding">H1-3 Road No-4 Ipia Delhi</p>
+</div>
+<div class="hostel-meta">
+<span class="hostel-price">
+<span class="price-from ng-binding">Boys Hostel&nbsp;</span>
+<p>
+<span class="price ng-binding">Rs. 13,000 To 15,500</span>
+</p>
+<span class="hostel-rating">
+
+</span></span></div>
+</a>
+</div>
+</div>
+</div><div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 ng-scope" ng-repeat="user in view.data_list | orderBy: '-ts_update' track by $index">
+<div class="hostel-thumbnail-list" style="height: 415px;">
+<div class="hostel-list-img">
+
+<a href="#!/user/Delhi/eik089757uqt/dream-destination" ui-sref="user({ 'u_name': ( user.u_web_url ) , 'u_city': ( user.u_city.toLowerCase() | replace: '-' | replace_dot: '-' ) || 'Delhi', 'userId': user.u_ctns_id })">
+<img ng-src="https://s3.us-east-2.amazonaws.com/images-city-teens/cropped1331417655.jpg" onerror="this.src='assets/images/building-image.png'" alt="Dream Destination , Hostel &amp; PG in Kota, Land Mark" style="height: 255px;" src="https://s3.us-east-2.amazonaws.com/images-city-teens/cropped1331417655.jpg">
+</a>
+
+<!--                         <div class="hostel-wishlist">
+<a href="#" class="wishlist-heart"></a>
+</div>
+ -->
+</div>
+
+<div class="hostel-content" style="height: 160px;">
+<a href="#!/user/Delhi/eik089757uqt/dream-destination" ui-sref="user({ 'u_name': ( user.u_web_url ) , 'u_city': ( user.u_city.toLowerCase() | replace: '-' | replace_dot: '-' ) || 'Delhi', 'userId': user.u_ctns_id })">
+<div>
+<h3 class="hostel-title ng-binding">
+                                    Dream Destination </h3>
+<p class="hostel-address ng-binding">G-42 Landmark City. Near </p>
+</div>
+<div class="hostel-meta">
+<span class="hostel-price">
+<span class="price-from ng-binding">Girls Hostel&nbsp;</span>
+<p>
+<span class="price ng-binding">12000 - 22000</span>
+</p>
+<span class="hostel-rating">
+
+</span></span></div>
+</a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div></div>
+
